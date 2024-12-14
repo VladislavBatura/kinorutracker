@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "KinoRuTracker",
+  "version": "1.0",
+
+  "description": "Adds a button, that redirect user to a finding result of the movie name on RuTracker",
+
+  "icons": {
+    "48": "icons/bee.png"
+  },
+  
+  "browser_specific_settings": {
+	  "gecko": {
+		"id": "KinoRuTracker@vlad.ru"
+	  }
+	},
+
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.kinopoisk.ru/*"],
+      "js": ["kinorutracker.js"]
+    }
+  ]
+}
